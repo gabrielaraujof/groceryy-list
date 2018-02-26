@@ -15,4 +15,5 @@ script:
 deploy:
   provider: firebase
   token:
-    secure: "YOUR ENCRYPTED token"
+    secure: '$FIREBASE_TOKEN'
+  project: 'grocery-store-app'
