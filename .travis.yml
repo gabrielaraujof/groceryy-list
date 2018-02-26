@@ -1,0 +1,16 @@
+language: node_js
+
+node_js: 'lts/*'
+
+cache: yarn
+
+before_script:
+  - yarn global add firebase-tools
+
+script:
+  - yarn lint
+  - yarn unit
+  - yarn build
+
+deploy:
+  - firebase deploy -m "Job $TRAVIS_JOB_ID, build $TRAVIS_BUILD_ID" --token=$FIREBASE_TOKEN --project grocery-list-app --non-interactive
