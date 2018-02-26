@@ -13,27 +13,12 @@ module.exports = {
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
-      'webdriver.chrome.driver': require('chromedriver').path
+      'webdriver.chrome.driver': require('chromedriver').path,
+      'webdriver.gecko.driver' : require('geckodriver').path,
     }
   },
 
   test_settings: {
-    // default: {
-    //   launch_url: 'http://ondemand.saucelabs.com:80',
-    //   selenium_port: 80,
-    //   selenium_host: 'ondemand.saucelabs.com',
-    //   silent: true,
-    //   username: process.env.SAUCE_USERNAME,
-    //   access_key: process.env.SAUCE_ACCESS_KEY,
-    //   screenshots: {
-    //     enabled: false,
-    //     path: '',
-    //   },
-    //   globals: {
-    //     waitForConditionTimeout: 10000,
-    //   },
-    // },
-
     default: {
       selenium_port: 4444,
       selenium_host: 'localhost',
@@ -47,7 +32,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
-        acceptSslCerts: true
+        acceptSslCerts: true,
+        chromeOptions: {
+          args: ["--no-sandbox"],
+        },
       }
     },
 
