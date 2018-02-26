@@ -4,9 +4,14 @@ node_js: 'lts/*'
 
 cache: yarn
 
+before_script:
+  - node build/dev-server.js &  # start a Web server
+  - sleep 3 # give Web server some time to bind to sockets, etc
+
 script:
   - yarn lint
-  - xvfb-run yarn test
+  - yarn unit
+  - xvfb-run yarn e2e:ci
   - yarn build
 
 deploy:
