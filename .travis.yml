@@ -6,13 +6,11 @@ cache: yarn
 
 script:
   - yarn lint
-  - yarn unit
+  - xvfb-run yarn test
   - yarn build
-
-before_deploy:
-  - firebase login --reauth
 
 deploy:
   provider: surge
-  project: './dist'
+  project: ./dist/
+  domain: glistapp.surge.sh
   on: master
