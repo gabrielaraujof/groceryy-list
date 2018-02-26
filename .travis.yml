@@ -4,13 +4,16 @@ node_js: 'lts/*'
 
 cache: yarn
 
-before_script:
+before_install:
   - yarn global add firebase-tools
 
 script:
   - yarn lint
   - yarn unit
   - yarn build
+
+before_deploy:
+  - firebase login --reauth
 
 deploy:
   provider: firebase
