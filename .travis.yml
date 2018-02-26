@@ -13,4 +13,6 @@ script:
   - yarn build
 
 deploy:
-  - firebase deploy -m "Job $TRAVIS_JOB_ID, build $TRAVIS_BUILD_ID" --token=$FIREBASE_TOKEN --project grocery-list-app --non-interactive
+  provider: firebase
+  token:
+    secure: "YOUR ENCRYPTED token"
