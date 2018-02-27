@@ -2,6 +2,8 @@
 
 > A really useful grocery list PWA.
 
+[![Build Status](https://travis-ci.org/gabrielaraujof/groceryy-list.svg?branch=master)](https://travis-ci.org/gabrielaraujof/groceryy-list)
+
 ## Build Setup
 
 ``` bash
