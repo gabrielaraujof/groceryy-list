@@ -12,7 +12,7 @@ module.exports = {
       .url(devServer)
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.toolbar')
-      .assert.containsText('.toolbar__title', 'Vuetify.js')
+      .assert.containsText('.toolbar__title', 'Grocery List')
       .assert.elementCount('img', 1)
       .end();
   },
