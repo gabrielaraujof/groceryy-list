@@ -17,6 +17,6 @@ script:
 deploy:
   provider: surge
   project: ./dist/
-  domain: glistapp.surge.sh
+  domain: https://glistapp.surge.sh
   skip_cleanup: true
   on: master
