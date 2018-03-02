@@ -22,7 +22,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app>
+    <v-toolbar app class="primary white--text">
       <v-toolbar-side-icon
         @click.stop="drawer = !drawer"
       >
