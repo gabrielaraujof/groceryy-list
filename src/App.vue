@@ -24,22 +24,15 @@
     </v-navigation-drawer>
     <v-toolbar app class="primary white--text">
       <v-toolbar-side-icon
+        class="white--text"
         @click.stop="drawer = !drawer"
       >
       </v-toolbar-side-icon>
       <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
     </v-toolbar>
     <v-content>
       <router-view/>
     </v-content>
-    <v-footer
-      :fixed="fixed"
-      :inset="true"
-      app
-    >
-      <span>&copy; 2018</span>
-    </v-footer>
   </v-app>
 </template>
 

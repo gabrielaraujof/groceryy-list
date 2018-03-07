@@ -13,6 +13,18 @@
         </blockquote>
       </v-layout>
     </v-slide-y-transition>
+    <v-fab-transition>
+      <v-btn
+        class="accent"
+        dark
+        fab
+        fixed
+        bottom
+        right
+    >
+        <v-icon>add</v-icon>
+      </v-btn>
+    </v-fab-transition>
   </v-container>
 </template>
 
