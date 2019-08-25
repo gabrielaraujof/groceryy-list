@@ -128,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "grocery-list"
+    }
+  },
+  "defaultProject": "grocery-list",
+  "cli": {
+    "defaultCollection": "@ngxs/schematics"
+  }
 }
